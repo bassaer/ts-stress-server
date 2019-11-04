@@ -1,0 +1,31 @@
+{
+  "name": "ts-stress-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node ./src/index.ts",
+    "test": "echo 'skip test'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bassaer/ts-stress-server.git"
+  },
+  "keywords": [],
+  "author": "Tsubasa Nakayama <app.nakayama@gmail.com> (https://bassaer.github.io/me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bassaer/ts-stress-server/issues"
+  },
+  "homepage": "https://github.com/bassaer/ts-stress-server#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.21",
+    "danger": "^9.2.2",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
+    "ts-node": "^8.4.1",
+    "tslint": "^6.0.0-beta0",
+    "typescript": "^3.6.4"
+  }
+}
