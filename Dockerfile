@@ -7,7 +7,7 @@ COPY tsconfig.json ./
 COPY yarn.lock ./
 COPY /src/ ./src/
 
-RUN apt-get update && apt-get install -y yarn
+RUN apt update && apt install -y yarn stress
 RUN yarn install && yarn build
 
 COPY . .
