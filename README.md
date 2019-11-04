@@ -5,10 +5,10 @@
 ## give stress
 
 ```
-❯ curl 'localhost:8080?cpu=50'
+❯ curl 'localhost?cpu=50'
 OK!
 
-❯ curl 'localhost:8080?mem=104857600'
+❯ curl 'localhost?mem=104857600'
 OK!
 ```
 

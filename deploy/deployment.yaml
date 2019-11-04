@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ts-stress-server
+spec:
+  selector:
+    matchLabels:
+      app: ts-stress-server
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: ts-stress-server
+    spec:
+      containers:
+      - name: ts-stress-server
+        image: bassaer/ts-stress-server
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
