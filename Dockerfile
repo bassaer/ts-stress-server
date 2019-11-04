@@ -12,6 +12,6 @@ RUN yarn install && yarn build
 
 COPY . .
 
-#EXPOSE 8080
+EXPOSE 80
 
 CMD [ "node", "dist/index.js"]
