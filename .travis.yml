@@ -9,7 +9,6 @@ service:
 script:
 - export TAG=$(cat package.json | python -c "import sys,json; print(json.load(sys.stdin).get('version'))")
 - docker build -t bassaer/ts-stress-server -t bassaer/ts-stress-server:$TAG .
-- docker run bassaer/ts-stress-server
 deploy:
   provider: script
   skip_cleanup: true

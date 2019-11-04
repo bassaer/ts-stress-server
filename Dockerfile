@@ -7,11 +7,11 @@ COPY tsconfig.json ./
 COPY yarn.lock ./
 COPY /src/ ./src/
 
-RUN apt update && apt install -y yarn stress
+RUN apt-get update && apt-get install -y yarn stress-ng
 RUN yarn install && yarn build
 
 COPY . .
 
 EXPOSE 80
 
-CMD [ "node", "dist/index.js"]
+CMD ["node", "dist/index.js"]
