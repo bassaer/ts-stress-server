@@ -1,0 +1,17 @@
+languare: node_js
+branches:
+  only:
+  - master
+node_js:
+- 12
+service:
+- docker
+script:
+- docker build -t bassaer/ts-stress-server .
+- docker run bassaer/ts-stress-server
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: bash scripts/docker_push.sh
+  on:
+    branch: master
